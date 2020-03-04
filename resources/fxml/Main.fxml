@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.*?>
+
+
+<?import javafx.scene.shape.Circle?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller" stylesheets="/css/Styles.css">
+
+    <top>
+        <VBox alignment="TOP_CENTER" maxHeight="400">
+            <HBox alignment="CENTER">
+                <JFXButton buttonType="FLAT" text="Forwards" alignment="TOP_CENTER" styleClass="button" onAction="#forwards"/>
+            </HBox>
+            <HBox alignment="CENTER">
+                <JFXTextField fx:id="forwardSpeed" text="Speed" styleClass="textInput" onKeyReleased="#forwardSpeedValidate"/>
+                <JFXTextField fx:id="forwardDuration" text="Duration" styleClass="textInput" onKeyReleased="#forwardDurationValidate"/>
+            </HBox>
+        </VBox>
+    </top>
+
+
+    <left>
+        <HBox alignment="CENTER_LEFT" styleClass="peep" maxWidth="400">
+            <VBox alignment="CENTER_LEFT">
+                <JFXButton buttonType="FLAT" text="Left" alignment="TOP_CENTER" styleClass="button" onAction="#left"/>
+            </VBox>
+            <VBox  alignment="CENTER_LEFT">
+                <JFXTextField fx:id="leftSpeed" text="Speed"  styleClass="textInput" onKeyReleased="#leftSpeedValidate" />
+                <JFXTextField fx:id="leftDuration" text="Duration" styleClass="textInput" onKeyReleased="#leftDurationValidate"/>
+            </VBox>
+        </HBox>
+    </left>
+
+    <center>
+        <GridPane BorderPane.alignment="CENTER" hgap="10" vgap="10">
+
+<!--            <Circle fx:id="middleCircle" radius="10" fill="black" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" GridPane.halignment="CENTER"/>-->
+            <ImageView GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" GridPane.halignment="CENTER" fitHeight="200" fitWidth="200">
+                <Image url="/img/finch.png" />
+            </ImageView>
+
+
+            <HBox alignment="BOTTOM_CENTER" >
+                <VBox alignment="BOTTOM_CENTER" maxHeight="100">
+                    <HBox alignment="CENTER">
+<!--                        <Button text="Backwards" alignment="TOP_CENTER"/>-->
+                        <JFXButton buttonType="FLAT" text="Backwards" alignment="TOP_CENTER" styleClass="button" onAction="#backwards"/>
+                    </HBox>
+                    <HBox alignment="CENTER">
+
+                        <JFXTextField fx:id="backwardSpeed" text="Speed" styleClass="textInput" onKeyReleased="#backwardSpeedValidate"/>
+                        <JFXTextField fx:id="backwardDuration" text="Direction" styleClass="textInput" onKeyReleased="#backwardDurationValidate"/>
+
+                    </HBox>
+                </VBox>
+            </HBox>
+
+        </GridPane>
+    </center>
+
+    <right>
+        <HBox alignment="CENTER_LEFT">
+            <VBox alignment="CENTER_RIGHT">
+                <JFXButton buttonType="FLAT" text="Right" alignment="TOP_CENTER" styleClass="button" onAction="#right"/>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT">
+                <JFXTextField fx:id="rightSpeed" text="Speed" styleClass="textInput" onKeyReleased="#rightSpeedValidate"/>
+                <JFXTextField fx:id="rightDuration" text="Direction" styleClass="textInput" onKeyReleased="#rightDurationValidate"/>
+            </VBox>
+        </HBox>
+    </right>
+    <bottom>
+        <HBox spacing="50" styleClass="secondaryHBoxButtons" alignment="CENTER" BorderPane.alignment="CENTER">
+
+            <JFXButton buttonType="FLAT" text="Retrace" alignment="TOP_CENTER" styleClass="secondaryButton" onAction="#retrace"/>
+            <JFXButton buttonType="FLAT" text="Write" alignment="TOP_CENTER" styleClass="secondaryButton" onAction="#write"/>
+            <JFXButton buttonType="FLAT" text="Read" alignment="TOP_CENTER" styleClass="secondaryButton" onAction="#read"/>
+            <JFXButton buttonType="FLAT" text="Quit" alignment="TOP_CENTER" styleClass="secondaryButton" onAction="#quit"/>
+
+
+        </HBox>
+    </bottom>
+
+
+
+
+
+</BorderPane>
+

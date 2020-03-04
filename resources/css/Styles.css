@@ -1,0 +1,28 @@
+Canvas {
+    -fx-background-color: white
+;
+}
+
+.button {
+    -fx-padding: 10px;
+    -fx-background-color: #F5BB00;
+
+}
+.secondaryButton {
+    -fx-background-color: #EC9F05;
+    -fx-text-fill: white;
+
+}
+
+.secondaryHBoxButtons {
+    -fx-padding: 50, 0, 0, 0;
+}
+
+Hbox {
+    -fx-padding: 10px;
+}
+
+
+.textInput {
+
+}
